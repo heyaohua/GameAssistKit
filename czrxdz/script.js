@@ -28,8 +28,8 @@ document.addEventListener('DOMContentLoaded', () => {
         currentSymbol = symbol;
         gallery.innerHTML = '<div class="loading">正在加载图片...</div>';
         
-        // 构建图片路径
-        const basePath = `map/${symbol}/`;
+        // 构建图片路径 - 使用CDN域名
+        const basePath = `https://images-game.heyaohua.com/czrxdz/map/${symbol}/`;
         
         // 使用fetch API获取目录列表（在实际应用中，这里需要后端支持）
         // 由于我们没有后端，这里模拟获取图片列表
@@ -177,7 +177,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (currentImages.length === 0) return;
         
         currentIndex = index;
-        const imagePath = `map/${currentSymbol}/${currentImages[index]}`;
+        const imagePath = `https://images-game.heyaohua.com/czrxdz/map/${currentSymbol}/${currentImages[index]}`;
         modalImg.src = imagePath;
         captionText.innerHTML = `地图 ${index + 1} / ${currentImages.length}`;
         modal.style.display = 'block';
@@ -200,7 +200,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function showPrevImage() {
         if (currentIndex > 0) {
             currentIndex--;
-            const imagePath = `map/${currentSymbol}/${currentImages[currentIndex]}`;
+            const imagePath = `https://images-game.heyaohua.com/czrxdz/map/${currentSymbol}/${currentImages[currentIndex]}`;
             modalImg.src = imagePath;
             captionText.innerHTML = `地图 ${currentIndex + 1} / ${currentImages.length}`;
             updateNavButtons();
@@ -213,7 +213,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function showNextImage() {
         if (currentIndex < currentImages.length - 1) {
             currentIndex++;
-            const imagePath = `map/${currentSymbol}/${currentImages[currentIndex]}`;
+            const imagePath = `https://images-game.heyaohua.com/czrxdz/map/${currentSymbol}/${currentImages[currentIndex]}`;
             modalImg.src = imagePath;
             captionText.innerHTML = `地图 ${currentIndex + 1} / ${currentImages.length}`;
             updateNavButtons();
