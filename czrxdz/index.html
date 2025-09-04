@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>超自然行动组地图查询</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>超自然行动组地图查询</h1>
+            <p>根据后门状态快速查找对应地图和棺椁位置</p>
+        </header>
+        
+        <div class="search-container">
+            <div class="symbol-filter">
+                <h2>按符号筛选</h2>
+                <div class="symbol-buttons">
+                    <button class="symbol-btn" data-symbol="┓">┓</button>
+                    <button class="symbol-btn" data-symbol="┛">┛</button>
+                    <button class="symbol-btn" data-symbol="┣">┣</button>
+                    <button class="symbol-btn" data-symbol="┫">┫</button>
+                    <button class="symbol-btn" data-symbol="┳">┳</button>
+                    <button class="symbol-btn" data-symbol="┻">┻</button>
+                    <button class="symbol-btn" data-symbol="▃">▃</button>
+                    <button class="symbol-btn" data-symbol="▌">▌</button>
+                    <button class="symbol-btn" data-symbol="■">■</button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="gallery-container">
+            <h2>地图图库</h2>
+            <div id="gallery" class="gallery">
+                <!-- 图片将通过JavaScript动态加载 -->
+                <div class="loading">请选择一个符号查看对应地图...</div>
+            </div>
+        </div>
+        
+        <div class="modal" id="imageModal">
+            <span class="close">&times;</span>
+            <img class="modal-content" id="modalImage">
+            <div id="caption"></div>
+            <div class="navigation">
+                <button id="prevBtn">&lt; 上一张</button>
+                <button id="nextBtn">下一张 &gt;</button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
