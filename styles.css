@@ -62,6 +62,7 @@ header p {
 /* 主要内容区域 */
 main {
     padding: 3rem 0;
+    margin-bottom: 5rem; /* 添加底部边距，防止内容被固定页脚遮挡 */
 }
 
 .intro {
@@ -193,6 +194,9 @@ footer {
     color: white;
     padding: 1.5rem 0;
     text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
 }
 
 footer a {
